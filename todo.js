@@ -18,6 +18,7 @@ function command(fn){
 }
 
 var id = 0;
+var task = 0;
 var todo_count=0;
 var doing_count=0;
 var done_count=0;
@@ -32,25 +33,26 @@ const todolist = [
 // 할일 추가하기
 function add(content){
   // window.localStorage.setItem('todo_list',JSON.stringify(todo_list));
-  console.log(todolist.length);
-
-  todolist.push({content:content,task:0})
-  // console.log(todo_list[i]);
+  task = task+1;
+  todolist.push({content:content,task:task})
   console.log(todolist);
-  // let reverse_data = data.reverse();
-  // console.log(reverse_data);
+  console.log(todolist.length);
   console.log(`id: ${id}, "${content}" 항목이 새로 추가됐습니다.`);
   todo_count = todo_count+1;
   printState();
 }
-function printState(){
-  return console.log(`현재상태 : todo ${todo_count}개, doing ${doing_count}개, done ${done_count}개`);
-}
 //doing과 done용 show
-function show(){
+function show(state){
+  //list에서 state찾아서 출력
+  return ``;
+}
+// function update
+function printState(){
+  return `현재상태 : todo ${todo_count}개, doing ${doing_count}개, done ${done_count}개`;
 }
 
-command('add$자바스크립트 공부하기')
+// command('add$자바스크립트 공부하기')
+command('show  $doing');
 
 
 
