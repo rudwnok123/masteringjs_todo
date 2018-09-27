@@ -51,8 +51,14 @@ function printState(){
   return `현재상태 : todo ${todo_count}개, doing ${doing_count}개, done ${done_count}개`;
 }
 
-// command('add$자바스크립트 공부하기')
-command('show  $doing');
+// add만 되는 상태
+
+command('add$자바스크립트 공부하기')
+// command('show  $doing');
+
+
+
+
 
 
 
